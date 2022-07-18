@@ -12,7 +12,7 @@ class Load {
         readdirSync("./src/commands", { encoding: "utf8" })
             .filter((file) => file.endsWith(".js"))
             .forEach(async (files) => {
-                const prop = await import(`../commands/${files}`);
+                const prop = await import(`../commands/${files}`).then((modules) => modules.default);
                 if (!prop.info || !prop.operate) return;
 
                 client.commands.set(prop.info.name, prop);
