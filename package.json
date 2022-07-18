@@ -1,6 +1,7 @@
 {
   "name": "v14-empty",
   "version": "1.0.0",
+  "type": "module",
   "description": "v14 empty bot",
   "main": "jahky.js",
   "scripts": {
