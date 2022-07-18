@@ -1,0 +1,14 @@
+{
+  "name": "v14-empty",
+  "version": "1.0.0",
+  "description": "v14 empty bot",
+  "main": "jahky.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jahky",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.0.1"
+  }
+}
