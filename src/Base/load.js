@@ -16,6 +16,10 @@ class Load {
                 if (!prop.info || !prop.operate) return;
 
                 client.commands.set(prop.info.name, prop);
+                 if (!prop.info.aliases || prop.info.aliases.length < 1) return;
+                        prop.info.aliases.forEach((otherUses) => {
+                           client.aliases.set(otherUses, prop.info.name);
+                        });
             });
     }
 
