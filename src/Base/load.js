@@ -32,7 +32,7 @@ class Load {
         readdir("./src/events", (err, files) => {
             if (err) console.log(err);
             files.forEach(async (file) => {
-                const event = await import(`../events/global/${file}`).then(
+                const event = await import(`../events/${file}`).then(
                     (modules) => modules.default
                 );
                 event(client);
