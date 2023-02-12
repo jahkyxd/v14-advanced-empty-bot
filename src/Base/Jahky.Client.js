@@ -5,7 +5,7 @@ import {
 } from "discord.js";
 import logger from "./logger.js";
 import config from "../../config.js";
-import db from "./Database/index.js";
+import db from "ceki.db";
 
 class Jahky extends Client {
     constructor() {
@@ -22,7 +22,6 @@ class Jahky extends Client {
         this.config = global.config = config;
         global.system = this;
         this.logger = logger;
-        this.reply = reply;
         this.db = global.db = db;
     }
 }
